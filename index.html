@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Preferences</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="settings">
+            <h1 class="settings__header">Preferences </h1>
+            <p class="settings__description">On this page you can configure the main system parameters available for customization</p>
+
+            <form class="settings__form" action="/" method="POST">
+                <div class="settings__element-pair">
+                    <label class="settings__input-label" for="title">Company Title</label>
+                    <input  class="settings__input-element input" type="text" value="Star and Moon" id="title">
+                </div>
+                <div class="settings__element-pair">
+                    <label class="settings__input-label" for="firstDay">First Day</label>
+                    <img class="settings__img firstDay" src="img/triangle.svg" alt="\/">
+                    <div class="settings__input-element select" name="firstDay" id="firstDay"></div>
+                    <div class="dropdown" style="display: none">
+                        <p class="option" name="firstDay" value="monday">monday</p>
+                        <p class="option" name="firstDay" value="tuedsay">tuedsay</p>
+                        <p class="option" name="firstDay" value="wendesday">wendesday</p>
+                    </div>
+                </div>
+                <div class="settings__element-pair">
+                    <label class="settings__input-label" for="cWidth">Container Width</label>
+                    <img class="settings__img cWidth" src="img/triangle.svg" alt="\/">
+                    <div class="settings__input-element select" name="cWidth" id="cWidth"></div>
+                    <div class="dropdown" style="display: none">
+                        <p class="option" name="cWidth" value="fixed">fixed</p>
+                        <p class="option" name="cWidth" value="midi">midi</p>
+                        <p class="option" name="cWidth" value="mini">mini</p>
+                        <p class="option" name="cWidth" value="maxi">maxi</p>
+                    </div>
+                </div>
+                <div class="settings__element-pair">
+                    <label class="settings__input-label" for="homepage">Homepage</label>
+                    <img class="settings__img homepage" src="img/triangle.svg" alt="\/">
+                    <div class="settings__input-element select" name="homepage" id="homepage"></div>
+                    <div class="dropdown" style="display: none"> 
+                        <p class="option" name="homepage" value="starred_project">starred project</p>
+                        <p class="option" name="homepage" value="other">other</p>
+                    </div>
+                </div>
+                <div class="settings__element-pair">
+                    <label class="settings__input-label" for="size">Indent Size</label>
+                    <input class="settings__input-element input" type="number" placeholder="default" id="size">
+                </div>
+                <div class="settings__element-pair">
+                    <p class="settings__input-label" for="personalCode">Personal Code</p>
+                    <div class="code-group">
+                        <input autocapitalize="characters" class="settings__input-element input code" minlength="4" maxlength="4" 
+                            name="code" type="text" placeholder="11AA" value="" id="code1"> -
+                        <input autocapitalize="characters" class="settings__input-element input code" minlength="4" maxlength="4" 
+                            name="code" type="text" placeholder="22BB" value="" id="code2"> -
+                        <input autocapitalize="characters" class="settings__input-element input code" minlength="4" maxlength="4" 
+                            name="code" type="text" placeholder="33CC" value="" id="code3">
+                    </div>
+                </div>
+                <div class="settings__element-pair">
+                    <p class="settings__input-label">Theme</p>
+                    <div class="theme-group">
+                        <input class="radio" checked type="radio" name="theme" value="" id="light-theme"> 
+                        <label class="theme-label" for="light-theme">Light</label> 
+
+                        <input class="radio" type="radio" name="theme" value="dark-theme" id="dark-theme">
+                        <label class="theme-label" for="dark-theme">Dark</label> 
+                    </div>
+                </div>
+                <div class="settings__buttons">
+                    <button type="submit" class="settings__button submit">Apply and Save</button>
+                    <button type="cancel" class="settings__button cancel">Cancel</button>
+                </div>
+            </form>
+        </section>
+        <footer class="footer">
+            <img class="footer__bgimg" src="img/img.svg" alt="">
+            <p class="footer__info">
+                <span>2020-2022</span>
+                <a class="footer__link" href="#">Terms of Service</a>
+                <span>and</span>
+                <a class="footer__link" href="#">Conditions</a>
+            </p>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/switchTheme.js"></script>
+</body>
+</html>
